@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        <input type="text" name="" value="" placeholder="Digite uma tarefa">
+        <button type="button" name="button" onclick="gravar()"> Gravar </button>
+
+        <ul>  </ul>
+
+        <script type="text/javascript">
+
+            let tarefas = [];
+
+            let gravar = () =>{
+
+                let input = document.querySelector('input'); // estou armazenando na minha variavel input a tag input do meu html
+                let tarefa = input.value; // armazena o valor digitado no input dentro da variavel tarefa
+
+                let item = document.createElement('li'); // cria uma tag li e armazena ela na minha variavel item
+
+                item.innerHTML = tarefa; // coloca dentro da tag li o conteudo da variavel tarefa
+
+                let listaDeTarefas = document.querySelector('ul'); //armazena na variavel listaDeTarefas a tag ul, que é uma lista
+
+                listaDeTarefas.appendChild(item); // inserindo a tag li dentro da tag ul
+
+
+
+
+                tarefas.push(tarefa); // adicionando a tarefa dentro do vetor tarefas
+                console.log(tarefas);
+
+            }
+
+
+
+        </script>
+
+    </body>
+</html>
